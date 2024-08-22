@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 // Press Shift twice to open the Search Everywhere dialog and type show whitespaces,
 // then press Enter. You can now see whitespace characters in your code.
@@ -44,7 +46,23 @@ public class Main {
         JTextField inputAmountTypeField = new JTextField();
         inputAmountTypeField.setBounds(130, 150, 120, 30);
         frame.add(inputAmountTypeField);
+        JButton add_button = new JButton("ADD");
+        add_button.setBounds(130, 250, 120, 40);
+        add_button.setBackground(Color.GREEN);
+        frame.add(add_button);
 
-        frame.setVisible(true);
-    }
-}
+        JButton view_button = new JButton("View");
+        view_button.setBounds(260,250,120,40);
+        view_button.setBackground(Color.RED);
+        frame.add(view_button);
+
+        add_button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String expense_type= expenseTypeField.getText();
+                int expanse_Amount= expense_amount_field.getText().isEmpty()?0:Integer.parseInt();
+                if (expanse_Amount!=0)
+
+            }
+        });
+
