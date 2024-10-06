@@ -6,12 +6,14 @@ public class MethodOverloading {
         Scanner scanner = new Scanner(System.in);
         int earning = Integer.parseInt(scanner.next());
         int expense = scanner.nextInt();
-        int saving = todaySavings(earning,expense);
-        System.out.println("Saving is: "+ saving);
+        int saving = todaySavings(earning, expense);
+        System.out.println("Saving is: " + saving);
 
 
     }
 
     private static int todaySavings(int earning, int expense) {
-      }
+
+        return earning;
+    }
 }
